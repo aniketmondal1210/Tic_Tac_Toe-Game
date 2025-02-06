@@ -1,0 +1,169 @@
+body {
+  background-color: pink;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 90%;
+  width: 400px;
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
+  color: #4caf50; /* Changed to green */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 2.5rem;
+}
+
+#turn-indicator {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+  background-color: #ffeaa7;
+  padding: 0.5rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#current-turn {
+  font-weight: bold;
+  color: #4caf50; /* Changed to green */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3eb03e;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.box:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+#reset-btn,
+#new-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#msg {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  text-shadow: none;
+}
+
+.msg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.hide {
+  display: none;
+}
+
+#score {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #81ecec;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#score p {
+  margin: 0.5rem;
+  color: #2d3436;
+}
+
+#score-o,
+#score-x {
+  font-weight: bold;
+  color: #4caf50; /* Changed to green */
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .box {
+    height: 80px;
+    width: 80px;
+    font-size: 2.5rem;
+  }
+
+  #msg {
+    font-size: 2rem;
+  }
+
+  #score {
+    flex-direction: column;
+  }
+}
+
